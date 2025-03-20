@@ -1,0 +1,126 @@
+* {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #ffffff; 
+    color: #000000; 
+    font-family: 'Arial', sans-serif;
+    border-radius: 10px;
+   
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #383737; /* Белый текст */
+  }
+  
+  .subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: #a0a0a0; /* Серый текст */
+    margin-bottom: 20px;
+  }
+  
+  .moonImage {
+    position: relative;
+    width: 240px;
+    height:200px;
+    margin-bottom: 0px;
+  }
+  
+  .moon {
+    position: relative;
+    width: 240px;
+    height:200px;
+  }
+  
+  .form {
+    background-color: #afadad; /* Тёмно-серый фон */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+  }
+  
+  .label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #ffffff; /* Белый текст */
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #bdbaba;
+    color: #000000;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input:focus {
+    border-color: #ffffff; /* Белая рамка при фокусе */
+    outline: none;
+  }
+  
+  .button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ffffff; /* Белый фон */
+    color: #000000; /* Чёрный текст */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .button:disabled {
+    background-color: #555;
+    color: #a0a0a0;
+    cursor: not-allowed;
+  }
+  
+  .button:hover:not(:disabled) {
+    background-color: #000000; /* Чёрный фон */
+    color: #ffffff; /* Белый текст */
+    border: 1px solid #ffffff; /* Белая рамка */
+  }
+  
+  .result {
+    background-color: #1a1a1a; /* Тёмно-серый фон */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .result pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #ffffff; /* Белый текст */
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .navLink {
+    color: #ffffff; /* Белый текст */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .navLink:hover {
+    color: #a0a0a0; /* Серый текст при наведении */
+  }

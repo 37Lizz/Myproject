@@ -1,0 +1,27 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .content {
+    text-align: left;
+    margin: 20px 0;
+    font-size: 1.1rem;
+    color: #444;
+  }
+  
+  .tips {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .tip {
+    margin: 10px 0;
+  }
