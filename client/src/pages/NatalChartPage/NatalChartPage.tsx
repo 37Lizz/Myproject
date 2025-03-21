@@ -1,3 +1,4 @@
+import type { JSX } from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Box, Typography, Button, Modal, Skeleton } from '@mui/material';
@@ -7,9 +8,9 @@ import UrlImg from '../../../public/25b6350f2604a65763fc9fceee6d85ad.jpg'; // Ф
 import MeditationButton from '../../components/MedutationButton';
 
 
-const MoonPage = () => {
+const MoonPage = (): JSX.Element => {
   const [svgUrl, setSvgUrl] = useState('');
-  const [forecast, setForecast] = useState({});
+  const [forecast, setForecast] = useState<Record<string, string | number>>({});
   const [philosophy, setPhilosophy] = useState('');
   const [moonAdvice, setMoonAdvice] = useState('');
   const [meditation, setMeditation] = useState('');
@@ -25,18 +26,18 @@ const navigate = useNavigate()
     axios
       .post('/api/moon', natal)
       .then(({ data }) => axios.post('/api/moonRussia', {text: data}). then(({data})=> setMoonAdvice(data)))
-      .catch((error) => console.log(error));
+      .catch((error: unknown) => console.log(error));
 
  
     axios
       .post('/api/chart', natal)
       .then(({ data }) => setSvgUrl(data))
-      .catch((error) => console.log(error));
+      .catch((error: unknown) => console.log(error));
 
       axios
       .get('/api/meditation')
       .then(({ data }) => setMeditation(data))
-      .catch((error) => console.log(error)).finally(() => setIsLoading(false));;
+      .catch((error: unknown) => console.log(error)).finally(() => setIsLoading(false));;
 
     axios
       .post('/api/sfera', natal)
@@ -45,7 +46,7 @@ const navigate = useNavigate()
         setForecast(data); // Устанавливаем прогноз
         setPhilosophy(data['Философия дня']); // Устанавливаем философскую фразу
       })
-      .catch((error) => console.log(error))
+      .catch((error: unknown) => console.log(error))
       .finally(() => setIsLoading(false)); // Завершаем загрузку
  
   }, [natal]);
